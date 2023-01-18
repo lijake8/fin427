@@ -14,7 +14,7 @@ spy = yf.download('SPY', start=start, end=end)
 mdy = yf.download('MDY', start=start, end=end)
 print(mdy.columns)
 print(mdy.head())
-print(mdy['Adj Close'])
+print(mdy['Adj Close']) # use adjusted price to take into account dividends and splits
 mdy['cumret']=mdy['Adj Close']/mdy['Adj Close'][0]
 spy['cumret']=spy['Adj Close']/spy['Adj Close'][0]
 mdy.to_csv(path + 'mdy.csv', index=True)
