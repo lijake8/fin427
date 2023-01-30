@@ -1,0 +1,388 @@
+   PERMNO       DATE     CUSIP                        COMNAM TICKER  PERMCO  \
+0   50906 1995-01-31  00088630  A D C TELECOMMUNICATIONS INC   ADCT    2902
+1   50906 1995-02-28  00088630  A D C TELECOMMUNICATIONS INC   ADCT    2902
+2   50906 1995-03-31  00088630  A D C TELECOMMUNICATIONS INC   ADCT    2902
+3   50906 1995-04-28  00088630  A D C TELECOMMUNICATIONS INC   ADCT    2902
+4   50906 1995-05-31  00088630  A D C TELECOMMUNICATIONS INC   ADCT    2902
+
+   SHRCD    VOL     RET    RETX  ...  d_4801_Banks  d_4802_Finance_NEC  \
+0     11  34941 -0.0200 -0.0200  ...             0                   0
+1     11  60361  0.1378  0.1378  ...             0                   0
+2     11  87371  0.0583  0.0583  ...             0                   0
+3     11  78824  0.1186  0.1186  ...             0                   0
+4     11  95578 -0.0606 -0.0606  ...             0                   0
+
+   d_4803_Insurance  d_4885_Real_Estate_Dev d_4890_REIT  \
+0                 0                       0           0
+1                 0                       0           0
+2                 0                       0           0
+3                 0                       0           0
+4                 0                       0           0
+
+   d_4900_Communications  d_6000_Miscellaneous numrets  retadj  abretadj
+0                      0                     0     191 -0.0200   -0.0305
+1                      0                     0     191  0.1378    0.0854
+2                      0                     0     191  0.0583    0.0409
+3                      0                     0     191  0.1186    0.0986
+4                      0                     0     191 -0.0606   -0.0847
+
+[5 rows x 61 columns]
+Index(['PERMNO', 'DATE', 'CUSIP', 'COMNAM', 'TICKER', 'PERMCO', 'SHRCD', 'VOL',
+       'RET', 'RETX', 'SHROUT', 'VWRETD', 'VWRETX', 'price', 'month', 'mc',
+       'lnmc', 'lag1cusip', 'lag1month', 'lag1mc', 'lag1lnmc', 'bmret',
+       'abret', 'ISIN', 'cusip9', 'FSESNum', 'FSISNum', 'FSESName', 'FSISName',
+       'MLIC', 'MLIL', 'Group', 'd', 'name', 'd_1100_Non_Energy_Minerals',
+       'd_1200_Producer_Manufacturing', 'd_1300_Electronic_Technology',
+       'd_1400_Consumer_Durables', 'd_2100_Energy_Minerals',
+       'd_2200_Process_Industries', 'd_2300_Health_Technology',
+       'd_2400_Consumer_Non_Durables', 'd_3100_Industrial_Services',
+       'd_3200_Commercial_Services', 'd_3250_Distribution_Services',
+       'd_3300_Technology_Services', 'd_3350_Health_Services',
+       'd_3400_Consumer_Services', 'd_3500_Retail_Trade',
+       'd_4600_Transportation', 'd_4700_Utilities', 'd_4801_Banks',
+       'd_4802_Finance_NEC', 'd_4803_Insurance', 'd_4885_Real_Estate_Dev',
+       'd_4890_REIT', 'd_4900_Communications', 'd_6000_Miscellaneous',
+       'numrets', 'retadj', 'abretadj'],
+      dtype='object')
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:               abretadj   R-squared:                       0.003
+Model:                            OLS   Adj. R-squared:                  0.003
+Method:                 Least Squares   F-statistic:                     45.21
+Date:                Mon, 30 Jan 2023   Prob (F-statistic):          1.84e-213
+Time:                        15:33:41   Log-Likelihood:             2.3087e+05
+No. Observations:              309269   AIC:                        -4.617e+05
+Df Residuals:                  309244   BIC:                        -4.614e+05
+Df Model:                          24
+Covariance Type:            nonrobust
+=================================================================================================
+                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+lag1lnmc                         -0.0048      0.000    -29.933      0.000      -0.005      -0.004
+d_1100_Non_Energy_Minerals        0.0724      0.003     27.067      0.000       0.067       0.078
+d_1200_Producer_Manufacturing     0.0723      0.002     29.469      0.000       0.067       0.077
+d_1300_Electronic_Technology      0.0766      0.002     32.006      0.000       0.072       0.081
+d_1400_Consumer_Durables          0.0719      0.003     28.186      0.000       0.067       0.077
+d_2100_Energy_Minerals            0.0728      0.003     28.386      0.000       0.068       0.078
+d_2200_Process_Industries         0.0695      0.003     27.761      0.000       0.065       0.074
+d_2300_Health_Technology          0.0784      0.002     32.428      0.000       0.074       0.083
+d_2400_Consumer_Non_Durables      0.0710      0.002     28.481      0.000       0.066       0.076
+d_3100_Industrial_Services        0.0741      0.003     28.931      0.000       0.069       0.079
+d_3200_Commercial_Services        0.0710      0.002     28.522      0.000       0.066       0.076
+d_3250_Distribution_Services      0.0729      0.003     26.830      0.000       0.068       0.078
+d_3300_Technology_Services        0.0775      0.002     31.671      0.000       0.073       0.082
+d_3350_Health_Services            0.0743      0.003     28.193      0.000       0.069       0.079
+d_3400_Consumer_Services          0.0710      0.002     29.214      0.000       0.066       0.076
+d_3500_Retail_Trade               0.0748      0.002     29.961      0.000       0.070       0.080
+d_4600_Transportation             0.0709      0.003     27.095      0.000       0.066       0.076
+d_4700_Utilities                  0.0697      0.003     27.316      0.000       0.065       0.075
+d_4801_Banks                      0.0713      0.002     28.805      0.000       0.066       0.076
+d_4802_Finance_NEC                0.0762      0.003     29.468      0.000       0.071       0.081
+d_4803_Insurance                  0.0735      0.003     27.983      0.000       0.068       0.079
+d_4885_Real_Estate_Dev            0.0713      0.006     11.592      0.000       0.059       0.083
+d_4890_REIT                       0.0706      0.002     28.551      0.000       0.066       0.075
+d_4900_Communications             0.0668      0.003     19.567      0.000       0.060       0.073
+d_6000_Miscellaneous              0.0556      0.008      6.712      0.000       0.039       0.072
+==============================================================================
+Omnibus:                    81147.685   Durbin-Watson:                   2.032
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           934144.313
+Skew:                           0.936   Prob(JB):                         0.00
+Kurtosis:                      11.306   Cond. No.                         816.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+R-squared: 0.0035
+lag1lnmc                        -0.0048
+d_1100_Non_Energy_Minerals       0.0724
+d_1200_Producer_Manufacturing    0.0723
+d_1300_Electronic_Technology     0.0766
+d_1400_Consumer_Durables         0.0719
+d_2100_Energy_Minerals           0.0728
+d_2200_Process_Industries        0.0695
+d_2300_Health_Technology         0.0784
+d_2400_Consumer_Non_Durables     0.0710
+d_3100_Industrial_Services       0.0741
+d_3200_Commercial_Services       0.0710
+d_3250_Distribution_Services     0.0729
+d_3300_Technology_Services       0.0775
+d_3350_Health_Services           0.0743
+d_3400_Consumer_Services         0.0710
+d_3500_Retail_Trade              0.0748
+d_4600_Transportation            0.0709
+d_4700_Utilities                 0.0697
+d_4801_Banks                     0.0713
+d_4802_Finance_NEC               0.0762
+d_4803_Insurance                 0.0735
+d_4885_Real_Estate_Dev           0.0713
+d_4890_REIT                      0.0706
+d_4900_Communications            0.0668
+d_6000_Miscellaneous             0.0556
+dtype: float64
+lag1lnmc                         0.0002
+d_1100_Non_Energy_Minerals       0.0027
+d_1200_Producer_Manufacturing    0.0025
+d_1300_Electronic_Technology     0.0024
+d_1400_Consumer_Durables         0.0025
+d_2100_Energy_Minerals           0.0026
+d_2200_Process_Industries        0.0025
+d_2300_Health_Technology         0.0024
+d_2400_Consumer_Non_Durables     0.0025
+d_3100_Industrial_Services       0.0026
+d_3200_Commercial_Services       0.0025
+d_3250_Distribution_Services     0.0027
+d_3300_Technology_Services       0.0024
+d_3350_Health_Services           0.0026
+d_3400_Consumer_Services         0.0024
+d_3500_Retail_Trade              0.0025
+d_4600_Transportation            0.0026
+d_4700_Utilities                 0.0026
+d_4801_Banks                     0.0025
+d_4802_Finance_NEC               0.0026
+d_4803_Insurance                 0.0026
+d_4885_Real_Estate_Dev           0.0062
+d_4890_REIT                      0.0025
+d_4900_Communications            0.0034
+d_6000_Miscellaneous             0.0083
+dtype: float64
+        predictions     cooks_d
+0            0.0089  1.5327e-07
+1            0.0089  5.7918e-07
+2            0.0083  1.0495e-07
+3            0.0081  8.0922e-07
+4            0.0075  8.3952e-07
+...             ...         ...
+309264       0.0057  2.4779e-06
+309265       0.0064  1.8375e-06
+309266       0.0065  1.8422e-05
+309267       0.0056  7.7597e-08
+309268       0.0055  4.4297e-06
+
+[309269 rows x 2 columns]
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:                  abret   R-squared:                       0.004
+Model:                            OLS   Adj. R-squared:                  0.004
+Method:                 Least Squares   F-statistic:                     47.28
+Date:                Mon, 30 Jan 2023   Prob (F-statistic):          5.10e-224
+Time:                        15:33:43   Log-Likelihood:             2.0919e+05
+No. Observations:              309269   AIC:                        -4.183e+05
+Df Residuals:                  309244   BIC:                        -4.181e+05
+Df Model:                          24
+Covariance Type:            nonrobust
+=================================================================================================
+                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+lag1lnmc                         -0.0053      0.000    -30.828      0.000      -0.006      -0.005
+d_1100_Non_Energy_Minerals        0.0796      0.003     27.737      0.000       0.074       0.085
+d_1200_Producer_Manufacturing     0.0797      0.003     30.314      0.000       0.075       0.085
+d_1300_Electronic_Technology      0.0843      0.003     32.851      0.000       0.079       0.089
+d_1400_Consumer_Durables          0.0792      0.003     28.950      0.000       0.074       0.085
+d_2100_Energy_Minerals            0.0812      0.003     29.507      0.000       0.076       0.087
+d_2200_Process_Industries         0.0767      0.003     28.559      0.000       0.071       0.082
+d_2300_Health_Technology          0.0862      0.003     33.241      0.000       0.081       0.091
+d_2400_Consumer_Non_Durables      0.0783      0.003     29.283      0.000       0.073       0.084
+d_3100_Industrial_Services        0.0816      0.003     29.693      0.000       0.076       0.087
+d_3200_Commercial_Services        0.0784      0.003     29.345      0.000       0.073       0.084
+d_3250_Distribution_Services      0.0802      0.003     27.536      0.000       0.075       0.086
+d_3300_Technology_Services        0.0851      0.003     32.454      0.000       0.080       0.090
+d_3350_Health_Services            0.0814      0.003     28.820      0.000       0.076       0.087
+d_3400_Consumer_Services          0.0785      0.003     30.112      0.000       0.073       0.084
+d_3500_Retail_Trade               0.0835      0.003     31.177      0.000       0.078       0.089
+d_4600_Transportation             0.0781      0.003     27.837      0.000       0.073       0.084
+d_4700_Utilities                  0.0770      0.003     28.160      0.000       0.072       0.082
+d_4801_Banks                      0.0786      0.003     29.593      0.000       0.073       0.084
+d_4802_Finance_NEC                0.0836      0.003     30.161      0.000       0.078       0.089
+d_4803_Insurance                  0.0812      0.003     28.848      0.000       0.076       0.087
+d_4885_Real_Estate_Dev            0.0785      0.007     11.892      0.000       0.066       0.091
+d_4890_REIT                       0.0781      0.003     29.418      0.000       0.073       0.083
+d_4900_Communications             0.0741      0.004     20.252      0.000       0.067       0.081
+d_6000_Miscellaneous              0.0621      0.009      6.987      0.000       0.045       0.079
+==============================================================================
+Omnibus:                   512311.038   Durbin-Watson:                   2.037
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):      13821170891.251
+Skew:                           9.844   Prob(JB):                         0.00
+Kurtosis:                    1038.455   Cond. No.                         816.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+R-squared: 0.0037
+lag1lnmc                        -0.0053
+d_1100_Non_Energy_Minerals       0.0796
+d_1200_Producer_Manufacturing    0.0797
+d_1300_Electronic_Technology     0.0843
+d_1400_Consumer_Durables         0.0792
+d_2100_Energy_Minerals           0.0812
+d_2200_Process_Industries        0.0767
+d_2300_Health_Technology         0.0862
+d_2400_Consumer_Non_Durables     0.0783
+d_3100_Industrial_Services       0.0816
+d_3200_Commercial_Services       0.0784
+d_3250_Distribution_Services     0.0802
+d_3300_Technology_Services       0.0851
+d_3350_Health_Services           0.0814
+d_3400_Consumer_Services         0.0785
+d_3500_Retail_Trade              0.0835
+d_4600_Transportation            0.0781
+d_4700_Utilities                 0.0770
+d_4801_Banks                     0.0786
+d_4802_Finance_NEC               0.0836
+d_4803_Insurance                 0.0812
+d_4885_Real_Estate_Dev           0.0785
+d_4890_REIT                      0.0781
+d_4900_Communications            0.0741
+d_6000_Miscellaneous             0.0621
+dtype: float64
+lag1lnmc                         0.0002
+d_1100_Non_Energy_Minerals       0.0029
+d_1200_Producer_Manufacturing    0.0026
+d_1300_Electronic_Technology     0.0026
+d_1400_Consumer_Durables         0.0027
+d_2100_Energy_Minerals           0.0028
+d_2200_Process_Industries        0.0027
+d_2300_Health_Technology         0.0026
+d_2400_Consumer_Non_Durables     0.0027
+d_3100_Industrial_Services       0.0027
+d_3200_Commercial_Services       0.0027
+d_3250_Distribution_Services     0.0029
+d_3300_Technology_Services       0.0026
+d_3350_Health_Services           0.0028
+d_3400_Consumer_Services         0.0026
+d_3500_Retail_Trade              0.0027
+d_4600_Transportation            0.0028
+d_4700_Utilities                 0.0027
+d_4801_Banks                     0.0027
+d_4802_Finance_NEC               0.0028
+d_4803_Insurance                 0.0028
+d_4885_Real_Estate_Dev           0.0066
+d_4890_REIT                      0.0027
+d_4900_Communications            0.0037
+d_6000_Miscellaneous             0.0089
+dtype: float64
+        predictions     cooks_d
+0            0.0095  1.3757e-07
+1            0.0096  4.9492e-07
+2            0.0089  8.7992e-08
+3            0.0086  6.9477e-07
+4            0.0080  7.3755e-07
+...             ...         ...
+309264       0.0071  2.2148e-06
+309265       0.0078  1.6524e-06
+309266       0.0079  1.5837e-05
+309267       0.0070  5.7235e-08
+309268       0.0068  3.7713e-06
+
+[309269 rows x 2 columns]
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:               abretadj   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     8.197
+Date:                Mon, 30 Jan 2023   Prob (F-statistic):           5.96e-28
+Time:                        15:33:45   Log-Likelihood:             2.3042e+05
+No. Observations:              309269   AIC:                        -4.608e+05
+Df Residuals:                  309245   BIC:                        -4.605e+05
+Df Model:                          23
+Covariance Type:            nonrobust
+=================================================================================================
+                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+d_1100_Non_Energy_Minerals        0.0040      0.001      2.885      0.004       0.001       0.007
+d_1200_Producer_Manufacturing     0.0034      0.001      3.980      0.000       0.002       0.005
+d_1300_Electronic_Technology      0.0077      0.001     11.742      0.000       0.006       0.009
+d_1400_Consumer_Durables          0.0034      0.001      3.049      0.002       0.001       0.006
+d_2100_Energy_Minerals            0.0031      0.001      2.890      0.004       0.001       0.005
+d_2200_Process_Industries         0.0010      0.001      0.959      0.337      -0.001       0.003
+d_2300_Health_Technology          0.0096      0.001     12.782      0.000       0.008       0.011
+d_2400_Consumer_Non_Durables      0.0024      0.001      2.452      0.014       0.000       0.004
+d_3100_Industrial_Services        0.0045      0.001      4.160      0.000       0.002       0.007
+d_3200_Commercial_Services        0.0031      0.001      3.003      0.003       0.001       0.005
+d_3250_Distribution_Services      0.0026      0.001      1.911      0.056   -6.68e-05       0.005
+d_3300_Technology_Services        0.0077      0.001     10.369      0.000       0.006       0.009
+d_3350_Health_Services            0.0056      0.001      4.312      0.000       0.003       0.008
+d_3400_Consumer_Services          0.0030      0.001      3.447      0.001       0.001       0.005
+d_3500_Retail_Trade               0.0047      0.001      5.421      0.000       0.003       0.006
+d_4600_Transportation             0.0027      0.001      2.120      0.034       0.000       0.005
+d_4700_Utilities                 -0.0008      0.001     -0.832      0.405      -0.003       0.001
+d_4801_Banks                      0.0017      0.001      1.952      0.051   -6.92e-06       0.003
+d_4802_Finance_NEC                0.0053      0.001      5.106      0.000       0.003       0.007
+d_4803_Insurance                  0.0022      0.001      2.001      0.045    4.59e-05       0.004
+d_4885_Real_Estate_Dev            0.0009      0.006      0.160      0.873      -0.010       0.012
+d_4890_REIT                       0.0013      0.001      1.468      0.142      -0.000       0.003
+d_4900_Communications            -0.0039      0.002     -1.588      0.112      -0.009       0.001
+d_6000_Miscellaneous             -0.0048      0.008     -0.600      0.549      -0.021       0.011
+==============================================================================
+Omnibus:                    86700.893   Durbin-Watson:                   2.036
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           995756.537
+Skew:                           1.022   Prob(JB):                         0.00
+Kurtosis:                      11.550   Cond. No.                         12.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+R-squared: 0.0006
+d_1100_Non_Energy_Minerals       0.0040
+d_1200_Producer_Manufacturing    0.0034
+d_1300_Electronic_Technology     0.0077
+d_1400_Consumer_Durables         0.0034
+d_2100_Energy_Minerals           0.0031
+d_2200_Process_Industries        0.0010
+d_2300_Health_Technology         0.0096
+d_2400_Consumer_Non_Durables     0.0024
+d_3100_Industrial_Services       0.0045
+d_3200_Commercial_Services       0.0031
+d_3250_Distribution_Services     0.0026
+d_3300_Technology_Services       0.0077
+d_3350_Health_Services           0.0056
+d_3400_Consumer_Services         0.0030
+d_3500_Retail_Trade              0.0047
+d_4600_Transportation            0.0027
+d_4700_Utilities                -0.0008
+d_4801_Banks                     0.0017
+d_4802_Finance_NEC               0.0053
+d_4803_Insurance                 0.0022
+d_4885_Real_Estate_Dev           0.0009
+d_4890_REIT                      0.0013
+d_4900_Communications           -0.0039
+d_6000_Miscellaneous            -0.0048
+dtype: float64
+d_1100_Non_Energy_Minerals       0.0014
+d_1200_Producer_Manufacturing    0.0008
+d_1300_Electronic_Technology     0.0007
+d_1400_Consumer_Durables         0.0011
+d_2100_Energy_Minerals           0.0011
+d_2200_Process_Industries        0.0010
+d_2300_Health_Technology         0.0008
+d_2400_Consumer_Non_Durables     0.0010
+d_3100_Industrial_Services       0.0011
+d_3200_Commercial_Services       0.0010
+d_3250_Distribution_Services     0.0014
+d_3300_Technology_Services       0.0007
+d_3350_Health_Services           0.0013
+d_3400_Consumer_Services         0.0009
+d_3500_Retail_Trade              0.0009
+d_4600_Transportation            0.0013
+d_4700_Utilities                 0.0010
+d_4801_Banks                     0.0008
+d_4802_Finance_NEC               0.0010
+d_4803_Insurance                 0.0011
+d_4885_Real_Estate_Dev           0.0057
+d_4890_REIT                      0.0009
+d_4900_Communications            0.0025
+d_6000_Miscellaneous             0.0080
+dtype: float64
+        predictions     cooks_d
+0            0.0077  1.4937e-07
+1            0.0077  6.1902e-07
+2            0.0077  1.1324e-07
+3            0.0077  8.4712e-07
+4            0.0077  8.7561e-07
+...             ...         ...
+309264       0.0031  2.4186e-06
+309265       0.0031  1.7437e-06
+309266       0.0031  1.9418e-05
+309267       0.0031  1.0556e-07
+309268       0.0031  4.7460e-06
+
+[309269 rows x 2 columns]

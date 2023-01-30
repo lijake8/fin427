@@ -12,10 +12,10 @@ pd.set_option('display.max_colwidth', 50)
 pd.set_option('display.precision', 4)
 
 # Define a path for import and export
-path = 'F:\\UM\Courses\\FIN427\\FIN427 Winter 2023\\'
+path = '.'
 
 # Import monthly returns data
-df_returns = pd.read_excel(path + 'Excel02 Invesco MidCap Quality 20230104.xlsx', sheet_name='MthData')
+df_returns = pd.read_excel(path + '/Excel02 Invesco MidCap Quality 20230104.xlsx', sheet_name='MthData')
 print(df_returns.head())
 df_returns = df_returns.dropna()
 print(df_returns.head())
@@ -46,4 +46,6 @@ plt.ylabel('Invesco excess returns')
 plt.xlim([-0.25, 0.25])
 plt.ylim([-0.25, 0.25])
 plt.savefig(path + 'Invesco scatter vs S&P 400.jpg')
-plt.show()
+# plt.show()
+
+

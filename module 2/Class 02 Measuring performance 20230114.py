@@ -6,7 +6,7 @@ import statsmodels.api as sm
 from sklearn.metrics import r2_score
 
 # Define a path for import and export
-path = 'F:\\UM\Courses\\FIN427\\FIN427 Winter 2023\\'
+path = './'
 
 # Import monthly returns for individual S&P 400 stocks
 df_stockret = pd.read_excel(path + 'Excel02 S&P 400 historical returns 20221231.xlsx', sheet_name='mth')
